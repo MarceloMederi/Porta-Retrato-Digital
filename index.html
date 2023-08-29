@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Configurações da página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porta Retrato</title>
+
+    <!-- Links para os estilos CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+
+<body>
+
+    <!-- Script JavaScript para o efeito de digitação -->
+    <script>
+
+        // Aguarda o carregamento do DOM antes de executar o código
+        document.addEventListener("DOMContentLoaded", function() {
+            const options = {
+
+                // Configurações para a animação de digitação
+                strings: ["Momentos Especiais", "Para Recordar!"],
+                typeSpeed: 80, // Velocidade de digitação
+                backSpeed: 40, // Velocidade de apagar
+                startDelay: 500, // Atraso antes de começar
+                backDelay: 1000, // Atraso após apagar
+                loop: true, // Repetir o loop
+            };
+            
+            // Inicializa o Typed.js no elemento com a classe "typed-text"
+            const typed = new Typed(".typed-text", options);
+        });
+        
+    </script>
+
+     <!-- Conteúdo principal da página -->
+    <main>
+        
+         <!-- Seção do "porta-retrato" -->
+        <section class="bord1">
+
+            <!-- Título com o efeito de digitação -->
+            <h1><strong><span class="typed-text"></span></strong></h1>
+            
+            <!-- Interruptor para ligar/desligar a apresentação de slides -->
+            <p>Desliga / Liga:</p>
+            <label class="switch">
+                <input type="checkbox" id="toggle">
+                <span class="slider"></span>
+            </label>
+              
+            <!-- Estrutura da apresentação de slides -->
+            <div class="bord2">
+
+                <div class="bord3">
+
+                    <div class="slideshow">
+
+                        <div class="slide">
+                            <img src="fotos/fundo.jpg" alt="fundo">
+                        </div>
+
+                        <div class="slide">
+                            <img src="fotos/1.jpg" alt="1">
+                        </div>
+
+                        <div class="slide">
+                            <img src="fotos/2.jpg" alt="2">
+                        </div>
+
+                        <div class="slide">
+                            <img src="fotos/3.jpg" alt="3">
+                        </div>
+
+                        <div class="slide">
+                            <img src="fotos/4.jpg" alt="4">
+                        </div>
+
+                        <div class="slide">
+                            <img src="fotos/5.jpg" alt="5">
+                        </div>
+
+                        <div class="slide">
+                            <img src="fotos/6.jpg" alt="6">
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Scripts JavaScript adicionais -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+
+        // Aguarda o carregamento do DOM antes de executar o código
+        $(document).ready(function(){
+
+            // Inicializa a apresentação de slides usando a biblioteca Slick
+            const slideshow = $('.slideshow').slick({
+                autoplay: false,
+                autoplaySpeed: 3000,
+                arrows: false,
+                dots: false,
+                fade: true,
+                speed: 1000
+            });
+
+            // Liga/desliga a apresentação de slides com base no interruptor
+            $('#toggle').change(function() {
+                if ($(this).is(':checked')) {
+                    slideshow.slick('slickPlay');
+                } else {
+                    slideshow.slick('slickPause');
+                }
+            });
+        });
+    </script>
+
+    
+
+</body>
+</html>

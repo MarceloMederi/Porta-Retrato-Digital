@@ -1,0 +1,150 @@
+/* Estilo para o corpo da página */
+body{
+    background-color: #FFF5EE;
+    overflow: hidden;  
+}
+
+/* Estilo para os títulos */
+h1{
+    color:  black;
+    font-size: 1.1em;
+    font-family: Arial, Helvetica, sans-serif, Tahoma, sans-serif;
+    margin-left: 41%;
+    margin-block-start: -29px;
+}
+
+/* Estilo para parágrafos */
+p{
+margin: -20px;
+color:#FFF5EE;
+    
+}
+
+/* Estilo para o interruptor */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-left: 10%;
+    
+}
+  
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+/* Estilo do controle deslizante do interruptor */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+  
+/* Estilo do marcador do interruptor */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+  
+/* Estilo quando o interruptor está ligado */
+input:checked + .slider {
+    background-color: #2196F3;
+}
+  
+ /* Estilo quando o interruptor está em foco */
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+/* Estilo do marcador quando o interruptor está ligado */  
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+  
+/* Estilos para as bordas da seção "bord1" */
+.bord1 {
+    border: 8px solid #D2B48C;
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: #505050;
+    position: relative;
+    background-image: linear-gradient(to right, transparent 40%, #D2B48C 40%, #D2B48C 60%, transparent 60%);
+    background-size: 100% 20px; /* Tamanho da faixa de riscos */
+    background-repeat: no-repeat;
+}
+
+/* Elementos antes e depois da borda */
+.bord1::before,
+.bord1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-image: linear-gradient(to bottom, transparent 40%, #D2B48C 40%, #D2B48C 60%, transparent 60%);
+}
+
+.bord1::before {
+    left: -4px;
+}
+
+.bord1::after {
+    right: -4px;
+}
+
+/* Estilos para as bordas dos elementos */
+.bord2 {
+    border: 6px solid #D2B48C;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: #808080;
+}
+
+/* Estilos para as bordas dos elementos */
+.bord3{
+    border: 4px solid #D2B48C;
+    
+    box-sizing: border-box;
+    background-color: #FFDAB9;
+}
+
+/* Estilos para a apresentação de slides */
+.slideshow{
+    display: flex;
+    overflow: hidden;
+}
+
+/* Estilo de cada slide */
+.slide{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estilos para as imagens nos slides */
+img{
+    width: 80dvh;
+    height: 80vh;
+    object-fit: cover;
+    margin-left: 21%;
+}
